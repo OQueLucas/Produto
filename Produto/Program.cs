@@ -11,10 +11,8 @@ namespace Produto {
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade: ");
-            int quantidade = int.Parse(Console.ReadLine());
 
-            Produto p = new(nome, preco, quantidade);
+            Produto p = new(nome, preco);
 
             Console.WriteLine("Dados do produto: " + p);
 
@@ -29,7 +27,6 @@ namespace Produto {
             qte = int.Parse(Console.ReadLine());
             p.RemoverProdutos(qte);
             Console.WriteLine("Dados atualizados: " + p);
-
         }
     }
 }
