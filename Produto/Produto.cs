@@ -19,27 +19,34 @@ namespace Produto
             _quantidade = quantidade;
         }
 
-        public string GetNome()
+        public string Nome
         {
-            return _nome;
-        }
-
-        public void SetNome(string nome)
-        {
-            if(nome !=  null && nome.Length > 1)
-            {
-                _nome = nome;
+            get {
+                return _nome;
+            }
+            set {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
             }
         }
 
-        public string GetPreco()
+        public double Preco
         {
-            return _preco.ToString();
+            get
+            {
+                return _preco;
+            }
         }
-        public string GetQuantidade()
+        public double Quantidade
         {
-            return _quantidade.ToString();
+            get
+            {
+                return _quantidade;
+            }
         }
+
 
         public double ValorTotalEmEstoque()
         {
